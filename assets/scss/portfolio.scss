@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+$bg : #2F2E33 ;
+$color : #3A5199 ;
+$second : #D5D6D2 ;
+
+p{
+    color: $second;
+}
+body{
+    background: $bg;
+}
+.main{
+    padding: 0 12%;
+    padding-top: 30px;
+    width: 100vw;
+    height: 100vh;
+    @media screen and (max-width:1000px) {
+        padding: 0 10%;
+        padding-top: 30px;
+    }
+    @media screen and (max-width:900px) {
+        padding: 0 7%;
+        padding-top: 30px;
+    }
+
+    .main-header{  // HEADER A COPIER
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 7px;
+        img{
+            height: 50px;
+        }
+        .navigation{
+            display: flex;
+            align-items: center;
+            @media screen and (max-width:900px) {
+                display: none;
+            }
+            ul{
+                display: flex;
+                padding-top: 20px;
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        padding: 7px 10px;
+                        color: $second;
+                        display: flex;
+                        align-items: center;
+                        margin: 0 5px;
+                        @media screen and (max-width:400px) {
+                            font-size: 10px;
+                        }
+                        &:hover{
+                            background: $color;
+                            border-radius: 8px;
+                        }
+                    }
+                    .active{
+                        text-decoration: none;
+                        border: 3px solid $color;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+        .boutton{ 
+            display: flex;
+            align-items: center;
+            .engager{
+                display: flex;
+                align-items: center;
+                b{
+                    @media screen and (max-width:400px) {
+                        display: none;
+                    }
+                }
+                span{
+                    display: none;
+                    @media screen and (max-width:400px) {
+                        display: flex;
+                        font-size: 23px;
+                    }
+                }
+            }
+            .responsive{
+                display: none;
+                @media screen and (max-width:900px) {
+                    display: flex;
+                }
+                .modal{
+                    .modal-dialog , .modal-content{
+                        background: $bg;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .navigation{
+                    display: flex;
+                    align-items: center;
+                    ul{
+                        display: flex;
+                        li{
+                            list-style: none;
+                            a{
+                                text-decoration: none;
+                                padding: 7px 10px;
+                                color: $second;
+                                display: flex;
+                                align-items: center;
+                                margin: 0 5px;
+                                &:hover{
+                                    background: $color;
+                                    border-radius: 8px;
+                                }
+                            }
+                            .active{
+                                text-decoration: none;
+                                border: 3px solid $color;
+                                border-radius: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-body{
+        padding-top: 30px;
+       .body-title{
+        color: $second;   
+        h3{
+            text-align: center;
+            font-weight: bold;
+           }
+       }
+       .body-contenu{
+           display: grid;
+           justify-content: center;
+           grid-template-columns: 300px 300px 300px;
+           gap: 15px;
+           text-align: center;
+           @media screen and (max-width:1200px) {
+                grid-template-columns: 300px 300px;
+                padding-bottom: 30px;
+            }
+            @media screen and (max-width:750px) {
+                grid-template-columns: 300px;
+            }
+            @media screen and (max-width:400px) {
+                grid-template-columns: 100%;
+            }
+            .lien1{
+                animation: LienAnim 500ms;
+            }
+            .lien2{
+                animation: LienAnim 1s;
+            }
+            .lien3{
+                animation: LienAnim 1500ms;
+            }
+            .lien4{
+                animation: LienAnim 1500ms;
+                @media screen and (max-width:1200px) {
+                    animation: LienAnim 2s;                    
+                }
+            }
+            .lien5{
+                animation: LienAnim 1s;
+                @media screen and (max-width:1200px) {
+                    animation: LienAnim 2500ms;                    
+                }
+            }
+            .lien6{
+                animation: LienAnim 500ms;
+                @media screen and (max-width:1200px) {
+                    animation: LienAnim 3s;                    
+                }
+            }
+           .box{
+               height: 220px;
+               border-radius: 8px;
+               padding: 8px;
+               box-shadow: 1px 1px 4px white;
+               .box-pic{
+                   display: flex;
+                   justify-content: center;
+                   img{
+                       width: 100%;
+                       height: 130px;
+                       border-radius: 8px;
+                       object-fit: cover;
+                   }
+               }
+               .box-text{
+                   h3{
+                       color: $second;
+                   }
+               }
+           }
+       }
+    }
+}
+
+@keyframes LienAnim{
+    0%{
+        opacity: 0;
+    }
+    80%{
+    opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
